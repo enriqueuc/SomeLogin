@@ -27,6 +27,7 @@
 		295113131D4575E800464ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		295113151D4575E800464ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2951131B1D45790A00464ECE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2951131D1D457D0800464ECE /* SomeLogin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SomeLogin-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED2C4123C23549D4644123A0 /* Pods-SomeLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SomeLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SomeLogin/Pods-SomeLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +79,7 @@
 				295113101D4575E800464ECE /* Assets.xcassets */,
 				295113121D4575E800464ECE /* LaunchScreen.storyboard */,
 				295113151D4575E800464ECE /* Info.plist */,
+				2951131D1D457D0800464ECE /* SomeLogin-Bridging-Header.h */,
 			);
 			path = SomeLogin;
 			sourceTree = "<group>";

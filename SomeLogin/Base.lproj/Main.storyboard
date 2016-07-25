@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SomeLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SomeLogin" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,26 +24,61 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXe-hd-8iT">
-                                <rect key="frame" x="259" y="131" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXe-hd-8iT">
+                                <rect key="frame" x="30" y="131" width="540" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMQ-mE-QVh">
-                                <rect key="frame" x="259" y="214" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMQ-mE-QVh">
+                                <rect key="frame" x="30" y="176" width="540" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tp-iO-DCE">
-                                <rect key="frame" x="284" y="271" width="46" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5V-xU-ihF" customClass="GIDSignInButton">
+                                <rect key="frame" x="238" y="266" width="125" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="20g-sW-BmV"/>
+                                    <constraint firstAttribute="height" constant="45" id="bOn-cx-7rn"/>
+                                    <constraint firstAttribute="height" constant="45" id="dte-6v-ZNr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bOn-cx-7rn"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv3-e7-17z">
+                                <rect key="frame" x="277" y="221" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="bt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zbm-Bz-f9I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dXe-hd-8iT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qZ-ns-hkX"/>
+                            <constraint firstItem="Wv3-e7-17z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A4C-Xp-LYL"/>
+                            <constraint firstItem="w5V-xU-ihF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hla-bc-SIg"/>
+                            <constraint firstItem="dXe-hd-8iT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LHI-kl-PWW"/>
+                            <constraint firstItem="Wv3-e7-17z" firstAttribute="top" secondItem="AMQ-mE-QVh" secondAttribute="bottom" constant="15" id="P6J-oC-8p0"/>
+                            <constraint firstItem="dXe-hd-8iT" firstAttribute="top" secondItem="oCk-ZU-7pH" secondAttribute="bottom" constant="80" id="TG0-7P-pFJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AMQ-mE-QVh" secondAttribute="trailing" constant="10" id="VW0-Uk-j8r"/>
+                            <constraint firstItem="w5V-xU-ihF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIF-lP-2xJ"/>
+                            <constraint firstItem="AMQ-mE-QVh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lcj-bc-ksF"/>
+                            <constraint firstItem="AMQ-mE-QVh" firstAttribute="top" secondItem="dXe-hd-8iT" secondAttribute="bottom" constant="15" id="mvY-xh-15z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXe-hd-8iT" secondAttribute="trailing" constant="10" id="pW4-ON-BUF"/>
+                            <constraint firstItem="w5V-xU-ihF" firstAttribute="top" secondItem="Wv3-e7-17z" secondAttribute="bottom" constant="15" id="u8h-0T-2ki"/>
                             <constraint firstItem="oCk-ZU-7pH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="vuT-D4-zhZ"/>
+                            <constraint firstItem="AMQ-mE-QVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="wVd-I8-ueS"/>
                             <constraint firstItem="oCk-ZU-7pH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ySf-O4-Rcl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hla-bc-SIg"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
