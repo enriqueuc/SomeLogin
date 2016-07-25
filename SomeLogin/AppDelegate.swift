@@ -8,7 +8,12 @@
 
 import UIKit
 import Firebase
+//google sign in
 import GoogleSignIn
+//Twitter
+import Fabric
+import TwitterCore
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //twitter login
+        Twitter.sharedInstance().startWithConsumerKey("nBJTNb50ZQhe4Llow6JXGK6Ak", consumerSecret: "ZdarW6trQiGZVOOd9t9qVpcP3yFZMF6uP5m5i6kostELxdNl8Y")
+        Fabric.with([Twitter.self])
+        
         FIRApp.configure()
         return true
     }

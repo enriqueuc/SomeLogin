@@ -8,6 +8,8 @@ target 'SomeLogin' do
 	pod 'Firebase'
 	pod 'Firebase/Auth'
 	pod 'GoogleSignIn'
+	pod 'Fabric'
+	pod 'TwitterKit'
 
   # Pods for SomeLogin
 
